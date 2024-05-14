@@ -1,6 +1,11 @@
 {
-    "locations": [],
-    "foods": [],
-    "drinks": [],
-    "desserts": []
-}
+"foods": [
+   {
+    "id": 1,
+    "name": "hotdog",
+    "price": 
+
+   }
+
+]}
+
