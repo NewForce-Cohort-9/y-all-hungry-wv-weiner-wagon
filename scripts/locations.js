@@ -12,6 +12,7 @@ const handleLocationChange = (changeEvent) => {
         // Grab the element in index.html to change
         const container = document.querySelector("#locationMessage");
 
+        // Find location info to pull name from using the id inserted into the value portion of the <option>
         const location = locations.find(location => parseInt(changeEvent.target.value) === location.id);
 
         // Add a message about where the user is picking up based on their selection
@@ -19,6 +20,7 @@ const handleLocationChange = (changeEvent) => {
     }
 }
 
+// Define a function which builds out a dropdown to display a list of locations and allows a user to select a location for pickup
 export const getLocations = async () => {
     // Define a change event listener that invokes handleLocationChange() when dropdown selection is changed
     document.addEventListener("change", handleLocationChange);
@@ -40,6 +42,7 @@ export const getLocations = async () => {
     // Close select for location dropdown
     locationDropdown += `</select>`;
 
+    // Add a div that displays the message about which location is selected
     locationDropdown += `<div id='locationMessage'></div>
                         </article>`
 
