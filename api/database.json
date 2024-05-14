@@ -1,16 +1,4 @@
 {
-<<<<<<< HEAD
-"foods": [
-   {
-    "id": 1,
-    "name": "hotdog",
-    "price": 
-
-   }
-
-]}
-
-=======
     "locations": [{
         "id": 1,
         "name": "ur momma's house"
@@ -112,4 +100,3 @@
     }
     ]
 }
->>>>>>> main
