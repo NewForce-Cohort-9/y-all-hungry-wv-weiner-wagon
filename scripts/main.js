@@ -49,7 +49,10 @@ export const render = async () => {
                 <h3 class='asideText'>Drink</h3>
                 <h3 class='asideText'>Dessert</h3>
             </div>
-            <div class='button'>${placeUserOrder}</div>
+            <div class='orderBottom'>
+                <div class='asideText' id='subtotal'>Subtotal: $0.00</div>
+                ${placeUserOrder}
+            </div>
         </aside>
     </div>
 `
