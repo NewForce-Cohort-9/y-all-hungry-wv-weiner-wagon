@@ -46,6 +46,8 @@ export const render = async () => {
           <h2>Orders</h2>
           
       </article>
+      <aside class='displayOrder'>
+      </aside>
 `
 
 container.innerHTML = composedHTML
