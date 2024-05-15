@@ -62,18 +62,3 @@ container.innerHTML = composedHTML
 }
 
 render()
-
-/*<section class="choices__drinks options">
-<h2>drinks</h2>
-${drinksHTML}
-</section>
-
-<section class="choices__desserts options">
-<h2>Desserts</h2>
-${dessertsHTML}
-</section>
-</article>
-
-
-<article class="order">
-${buttonHTML}*/
