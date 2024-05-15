@@ -1,0 +1,14 @@
+.flexDisplay {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#locationDropdown {
+    margin: 1em;
+    padding: 0.25em;
+}
+
+#locationMessage {
+    margin: 1em;
+}
