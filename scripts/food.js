@@ -7,7 +7,7 @@ export const foodChoices = async () => {
   let foodHTML = " "
 
   foodHTML += '<select id="food">'
-  //foodHTML += '<option value="0"></option>'............ Is this needed? 
+  //foodHTML += '<option value="0"></option>'............ Note To Self: Is this needed? 
 
   /*const handleFoodChoices = (changeEvent) => {
     if(changeEvent.target.name === "food"){
