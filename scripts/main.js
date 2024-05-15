@@ -47,3 +47,6 @@ const render = async() => {
 
 
 render()
+import { getLocations } from "./locations.js";
+
+getLocations();
