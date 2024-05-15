@@ -17,6 +17,7 @@ export const render = async () => {
       
     <section class="choices__drinks options">
       <h2>Drinks</h2>
+      
     </section>
   
     <section class="choices__desserts options">
