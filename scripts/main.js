@@ -14,30 +14,32 @@ export const render = async () => {
 
   const composedHTML = `
     <h1>WV Weiner Wagon</h1>
+    <div class='flexDisplay">
+        <article class="choices">
+            <section class="choices__locations options">
+                <h2>Locations</h2>
+                ${locationDropdown}
+            </section>
+    
+            <section class="choices__food options">
+                <h2>Foods</h2>
+                ${foodHTML}
+            </section>
+        
+            <section class="choices__drinks options">
+                <h2>Drinks</h2>
+                ${drinkOptionsHTML}
+            </section>
+    
+            <section class="choices__desserts options">
+                <h2>Desserts</h2>
+            </section>
 
-  <article class="choices">
-      <section class="choices__locations options">
-        <h2>Locations</h2>
-          ${locationDropdown}
-      </section>
-    
-        <section class="choices__food options">
-            <h2>Foods</h2>
-            ${foodHTML}
-        </section>
-        
-      <section class="choices__drinks options">
-        <h2>Drinks</h2>
-        ${drinkOptionsHTML}
-      </section>
-    
-      <section class="choices__desserts options">
-        <h2>Desserts</h2>
-        
-      </section>
-      </article>
-      <aside class='displayOrder'>
-      </aside>
+        </article>
+        <aside class='displayOrder'>
+        <div id='locationMessage'></div>
+        </aside>
+    </div>
 `
 
 container.innerHTML = composedHTML

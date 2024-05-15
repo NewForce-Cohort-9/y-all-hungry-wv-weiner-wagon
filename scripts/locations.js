@@ -35,8 +35,7 @@ export const getLocations = async () => {
     const container = document.querySelector("#container");
 
     // Begin building a dropdown to select a location to pick up from
-    let locationDropdown = `<article class='flexDisplay'>
-                            <select id='locationDropdown'>
+    let locationDropdown = `<select id='locationDropdown'>
                             <option selected='true' disabled='disabled' value='0'>Select A Pickup Location</option>`;
 
     // Use .forEach() to iterate through the locations array to pull location info for each 
@@ -45,13 +44,7 @@ export const getLocations = async () => {
     });
 
     // Close select for location dropdown
-    locationDropdown += `</select>`;
+    locationDropdown += `</select>`;                        
 
-    // Add a div that displays the message about which location is selected
-    locationDropdown += `<div id='locationMessage'></div>
-                        </article>`
-
-    // Insert the dropdown into the container element in the index.html page
-    // container.innerHTML += locationDropdown;
     return locationDropdown
 }
