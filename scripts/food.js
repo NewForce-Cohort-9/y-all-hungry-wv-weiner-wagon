@@ -1,22 +1,23 @@
-import { setFood } from "./TransientState.js"
+import { setFood } from "./transientState.js"
 
 const handleFoodChange = (changeEvent) => {
   if (changeEvent.target.id === 'food') {
       const containerF = document.querySelector("#locationFood")
 
-      const food = foods.find(location => parseInt(changeEvent.target.value) === location.id);
+      const foodChoice = foods.find(food => parseInt(changeEvent.target.value) === food.id)
 
-      setLocation(location.id)
+      setFood(food.id)
 
-      container.innerHTML = `You're picking up from the ${location.name} location`;
+      containerF.innerHTML = `Chosen Food: ${foodChoice.id}`
+
   }
 }
+
+document.addEventListener("change", handleFoodChange)
 
 export const foodChoices = async () => {
   const response = await fetch("http://localhost:8088/foods")
   const foods = await response.json()
-
-
 
   let foodHTML = " "
 
@@ -31,11 +32,11 @@ const foodArray = foods.map( (food) => {
 )
 
 foodHTML += '<option value="6">None</option>'
+foodHTML += '<div id="locationFood"></div>'
+
 foodHTML += foodArray.join(" ")
 foodHTML += "</select>"
 
 return foodHTML
 
 } 
-
-
