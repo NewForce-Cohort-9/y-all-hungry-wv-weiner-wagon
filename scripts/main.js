@@ -1,7 +1,6 @@
 import { dessertOptions } from "./desserts.js";
 import { DrinkOptions } from "./drinks.js";
 import { foodChoices } from "./food.js"
-import { DrinkOptions } from "./drinks.js"
 import { getLocations } from "./locations.js";
 
 
@@ -9,14 +8,12 @@ getLocations();
 
 const container = document.querySelector("#container")
 
-const render = async() => {
-    const drinkOptionsHTML = await DrinkOptions()
-    const locationOptionsHTML = await getLocations()
-    const dessertHTML = await dessertOptions()
+    
 export const render = async () => {
   const foodHTML = await foodChoices()
   const drinkOptionsHTML = await DrinkOptions()
   const locationDropdown = await getLocations()
+  const dessertHTML = await dessertOptions()
 
 
   const composedHTML = `
