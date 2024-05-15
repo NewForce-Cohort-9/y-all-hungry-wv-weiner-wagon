@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { foodChoices } from "./food.js"
 
 const container = document.querySelector("#container")
@@ -48,3 +49,8 @@ ${dessertsHTML}
 
 <article class="order">
 ${buttonHTML}*/
+=======
+import { getLocations } from "./locations.js";
+
+getLocations();
+>>>>>>> main
