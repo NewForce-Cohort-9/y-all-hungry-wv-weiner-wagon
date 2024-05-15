@@ -1,4 +1,4 @@
-/*import { setFood } from "./TransientState.js"*/
+import { setFood } from "./TransientState.js"
 
 export const foodChoices = async () => {
   const response = await fetch("http://localhost:8088/foods")
