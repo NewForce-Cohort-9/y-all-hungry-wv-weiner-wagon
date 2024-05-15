@@ -1,4 +1,18 @@
+import { setDrink } from "./TransientState.js"
 
+const handleDrinkChange = (changeEvent) => {
+    if(changeEvent.target.id === 'drink') {
+
+        const containerD = document.querySelector("#locationDrink")
+
+        const drink = drinks.find(drink => parseInt(changeEvent.target.value) === drink.id)
+        
+        setDrink(drink.id)
+
+        containerD.innerHTML = `Drink Choice: ${drink.name}`
+    }
+
+}
 
 
 export const DrinkOptions = async() => {
@@ -6,17 +20,12 @@ export const DrinkOptions = async() => {
     const drinks = await response.json()
 
     
-    // const handleDrinkChange = (changeEvent) => {
-    //     if(changeEvent.target.id === 'drink') {
-    //         const
-    //     }
-
-    // }
+    document.addEventListener("change", handleDrinkChange)
 
     let drinkChoicesHTML = ""
 
-    drinkChoicesHTML += '<select id="drink">'
-    drinkChoicesHTML += '<option value="0">Drinks</option>'
+    drinkChoicesHTML += '<select id="drink" class="locationDrink">'
+    drinkChoicesHTML += '<option value="0">Choose a Drink Option</option>'
 
     const arrayOfDrinks = drinks.map( (drink) => {
             return `<option value="${drink.id}">${drink.name}</option>`
