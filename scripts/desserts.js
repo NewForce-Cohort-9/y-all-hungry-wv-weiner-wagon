@@ -1,4 +1,4 @@
-
+import { setDessert } from "./transientState.js"
 
 export const dessertOptions = async () => {
     const response = await fetch("http://localhost:8088/desserts")
