@@ -6,12 +6,12 @@ export const DrinkOptions = async() => {
     const drinks = await response.json()
 
     
-    const handleDrinkChange = (changeEvent) => {
-        if(changeEvent.target.id === 'drink') {
-            const
-        }
+    // const handleDrinkChange = (changeEvent) => {
+    //     if(changeEvent.target.id === 'drink') {
+    //         const
+    //     }
 
-    }
+    // }
 
     let drinkChoicesHTML = ""
 
