@@ -25,7 +25,7 @@ export const DrinkOptions = async() => {
     let drinkChoicesHTML = ""
 
     drinkChoicesHTML += '<select id="drink">'
-    drinkChoicesHTML += '<option value="0">Choose a Drink Option</option>'
+    drinkChoicesHTML += '<option value="0">Select a Drink</option>'
 
     const arrayOfDrinks = drinks.map( (drink) => {
             return `<option value="${drink.id}">${drink.name}</option>`
