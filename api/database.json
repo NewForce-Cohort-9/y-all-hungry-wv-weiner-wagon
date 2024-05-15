@@ -1,5 +1,6 @@
 {
-    "locations": [{
+    "locations": [
+    {
         "id": 1,
         "name": "ur momma's house"
     },
@@ -12,7 +13,6 @@
         "name": "middle of the woods"
     }
     ] , 
-
     "foods": [
         {
         "id": 1,
