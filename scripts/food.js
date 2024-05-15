@@ -1,13 +1,13 @@
 /*import { setFood } from "./TransientState.js"*/
 
 export const foodChoices = async () => {
-  const response = await fetch("http://localhost:3000/foods")
+  const response = await fetch("http://localhost:8088/foods")
   const foods = await response.json()
 
   let foodHTML = " "
 
   foodHTML += '<select id="food">'
-  foodHTML += '<option value="0">Food Items</option>' //Is this needed? 
+  foodHTML += '<option value="0">Select A Food</option>' //Is this needed? 
 
   /*const handleFoodChoices = (changeEvent) => {
     if(changeEvent.target.name === "food"){

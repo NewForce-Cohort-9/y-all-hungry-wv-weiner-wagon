@@ -1,32 +1,39 @@
-<<<<<<< HEAD
 import { foodChoices } from "./food.js"
+import { getLocations } from "./locations.js";
+
+getLocations();
 
 const container = document.querySelector("#container")
 
 export const render = async () => {
   const foodHTML = await foodChoices()
+  const locationDropdown = await getLocations()
 
 
   const composedHTML = `
-  <h1>WV Weiner Wagon</h1>
+    <h1>WV Weiner Wagon</h1>
 
   <article class="choices">
-      <section class="choices__food options">
-          <h2>Foods</h2>
-          ${foodHTML}
+      <section class="choices__locations options">
+        <h2>Locations</h2>
+          ${locationDropdown}
       </section>
-      
-    <section class="choices__drinks options">
-      <h2>Drinks</h2>
-      
-    </section>
-  
-    <section class="choices__desserts options">
-      <h2>Desserts</h2>
-      
-    </section>
-    </article>
-  
+    
+        <section class="choices__food options">
+            <h2>Foods</h2>
+            ${foodHTML}
+        </section>
+        
+      <section class="choices__drinks options">
+        <h2>Drinks</h2>
+        
+      </section>
+    
+      <section class="choices__desserts options">
+        <h2>Desserts</h2>
+        
+      </section>
+      </article>
 `
 
 container.innerHTML = composedHTML
@@ -49,8 +56,3 @@ ${dessertsHTML}
 
 <article class="order">
 ${buttonHTML}*/
-=======
-import { getLocations } from "./locations.js";
-
-getLocations();
->>>>>>> main

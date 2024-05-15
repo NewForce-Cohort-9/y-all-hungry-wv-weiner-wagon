@@ -47,6 +47,7 @@ export const getLocations = async () => {
                         </article>`
 
     // Insert the dropdown into the container element in the index.html page
-    container.innerHTML += locationDropdown;
+    //container.innerHTML += locationDropdown;
+    return locationDropdown
 
 }
