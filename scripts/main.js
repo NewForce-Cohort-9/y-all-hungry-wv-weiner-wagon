@@ -1,20 +1,7 @@
 import { dessertOptions } from "./desserts.js";
-
-const container = document.querySelector("container")
-
-const render = async () => {
-    const dessertOptionsHTML = await dessertOptions ()
-    const dessertHTML = await dessertOptions()
-
-
-
-    container.innerHTML = `
-    ${dessertHTML}`
-}
-document.addEventListener("newOrderCreated", render)
-render()
-import { DrinkOptions } from "./drinks.js"
+import { DrinkOptions } from "./drinks.js";
 import { getLocations } from "./locations.js";
+
 
 getLocations();
 
@@ -23,6 +10,7 @@ const maincontainer = document.querySelector("#container")
 const render = async() => {
     const drinkOptionsHTML = await DrinkOptions()
     const locationOptionsHTML = await getLocations()
+    const dessertHTML = await dessertOptions()
 
     const composedHTML = `
         <h1>WV Weiner Wagon</h1>
@@ -46,7 +34,7 @@ const render = async() => {
 
             <section class="choices__desserts options">
                 <h2>Dessert</h2>
-                
+                ${dessertHTML}
             </section>
         </article>
 
@@ -70,4 +58,3 @@ const render = async() => {
 
 
 render()
-
