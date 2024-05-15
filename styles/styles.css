@@ -1,7 +1,36 @@
+.asideText {
+    text-align: center;
+    margin: 1em;
+}
+
+.button {
+
+}
+
+.choices {
+    margin: 1em;
+}
+
+.displayOrder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 0.25em gray;
+    width: 35%;
+    height: 90vh;
+    margin: 1em;
+    padding: 1em;
+}
+
 .flexDisplay {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header {
+    justify-self: flex-start;
 }
 
 #locationDropdown {
@@ -11,4 +40,5 @@
 
 #locationMessage {
     margin: 1em;
+    text-align: center;
 }

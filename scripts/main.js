@@ -1,8 +1,7 @@
 import { foodChoices } from "./food.js"
 import { DrinkOptions } from "./drinks.js"
 import { getLocations } from "./locations.js";
-
-getLocations();
+import { placeOrder } from "./saveOrder.js";
 
 const container = document.querySelector("#container")
 
@@ -10,11 +9,12 @@ export const render = async () => {
   const foodHTML = await foodChoices()
   const drinkOptionsHTML = await DrinkOptions()
   const locationDropdown = await getLocations()
+  const placeUserOrder = await placeOrder()
 
 
   const composedHTML = `
     <h1>WV Weiner Wagon</h1>
-    <div class='flexDisplay">
+    <div class='flexDisplay'>
         <article class="choices">
             <section class="choices__locations options">
                 <h2>Locations</h2>
@@ -36,8 +36,16 @@ export const render = async () => {
             </section>
 
         </article>
+        
         <aside class='displayOrder'>
-        <div id='locationMessage'></div>
+            <div>
+                <h1 class='asideText header'>Order Up!</h1>
+                <div id='locationMessage'></div>
+                <h3 class='asideText'>Food</h3>
+                <h3 class='asideText'>Drink</h3>
+                <h3 class='asideText'>Dessert</h3>
+            </div>
+            <div class='button'>${placeUserOrder}</div>
         </aside>
     </div>
 `

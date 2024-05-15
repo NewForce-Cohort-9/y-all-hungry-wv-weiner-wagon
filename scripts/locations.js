@@ -44,7 +44,12 @@ export const getLocations = async () => {
     });
 
     // Close select for location dropdown
-    locationDropdown += `</select>`;                        
+    locationDropdown += `</select>`;
 
+    // Add a div that displays the message about which location is selected
+    // locationDropdown += `<div id='locationMessage'></div>`
+
+    // Insert the dropdown into the container element in the index.html page
+    // container.innerHTML += locationDropdown;
     return locationDropdown
 }
