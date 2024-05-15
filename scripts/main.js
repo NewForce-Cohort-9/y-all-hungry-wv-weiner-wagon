@@ -1,14 +1,22 @@
 import { DrinkOptions } from "./drinks.js"
+import { getLocations } from "./locations.js";
 
+getLocations();
 
 const maincontainer = document.querySelector("#container")
 
 const render = async() => {
     const drinkOptionsHTML = await DrinkOptions()
-
+    const locationOptionsHTML = await getLocations()
 
     const composedHTML = `
         <h1>WV Weiner Wagon</h1>
+        <article>
+            <section class="choices__location options">
+                <h2>Locations</h2>
+                ${locationOptionsHTML}
+            </section>
+        </article>
 
         <article class="choices">
             <section class="choices__foods options">
@@ -47,6 +55,4 @@ const render = async() => {
 
 
 render()
-import { getLocations } from "./locations.js";
 
-getLocations();
