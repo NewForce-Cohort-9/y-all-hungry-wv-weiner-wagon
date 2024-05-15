@@ -36,6 +36,17 @@ export const render = async () => {
         
       </section>
       </article>
+
+      <article class="order">
+       
+        </article>
+
+
+        <article class="customOrders">
+            <h2>Orders</h2>
+           
+        </article>
+
 `
 
 container.innerHTML = composedHTML

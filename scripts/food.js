@@ -1,8 +1,23 @@
 import { setFood } from "./TransientState.js"
 
-export const foodChoices = async () => {
-  const response = await fetch("http://localhost:8088/foods")
+const response = await fetch("http://localhost:8088/foods")
   const foods = await response.json()
+
+export const foodChoices = async () => {
+  document.addEventListener("change", handleLocationChange);
+
+  
+const handleLocationChange = (changeEvent) => {
+  
+  if (changeEvent.target.id === 'locationDropdown') {
+     
+      const container = document.querySelector("#locationMessage");
+
+      const location = locations.find(location => parseInt(changeEvent.target.value) === location.id);
+
+      container.innerHTML = `You're picking up from the ${location.name} location`;
+  }
+}
 
   let foodHTML = " "
 
