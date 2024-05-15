@@ -1,4 +1,5 @@
 import { setFood } from "./transientState.js"
+<<<<<<< HEAD
 
 const handleFoodChange = (changeEvent) => {
   if (changeEvent.target.id === 'food') {
@@ -14,6 +15,8 @@ const handleFoodChange = (changeEvent) => {
 }
 
 document.addEventListener("change", handleFoodChange)
+=======
+>>>>>>> main
 
 export const foodChoices = async () => {
   const response = await fetch("http://localhost:8088/foods")
