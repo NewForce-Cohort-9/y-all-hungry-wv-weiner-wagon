@@ -3,6 +3,8 @@ import { DrinkOptions } from "./drinks.js";
 import { foodChoices } from "./food.js"
 import { getLocations } from "./locations.js";
 import { placeOrder } from "./saveOrder.js";
+import { subtotal } from "./subtotal.js";
+import { newSubtotal } from "./test.js";
 
 const container = document.querySelector("#container")
 
@@ -13,6 +15,7 @@ export const render = async () => {
   const locationDropdown = await getLocations()
   const placeUserOrder = await placeOrder()
   const dessertHTML = await dessertOptions()
+  const sub = await newSubtotal()
 
 
   const composedHTML = `
@@ -47,10 +50,11 @@ export const render = async () => {
                 <div id='locationMessage'></div>
                 <h3 class='asideText'>Food</h3>
                 <h3 class='asideText'>Drink</h3>
+                <h5 class='asideText' id="locationDrink"></h5>
                 <h3 class='asideText'>Dessert</h3>
             </div>
             <div class='orderBottom'>
-                <div class='asideText' id='subtotal'>Subtotal: $0.00</div>
+                <div class='asideText' id='subtotal'>Subtotal: ${sub}</div>
                 ${placeUserOrder}
             </div>
         </aside>
