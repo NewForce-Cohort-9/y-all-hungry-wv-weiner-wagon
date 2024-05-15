@@ -17,15 +17,16 @@ export const setFood = (chosenFoodId) => {
     console.log(transientState)
 }
 
+export const setDessert = (chosenDessertId) => {
+    transientState.dessertId = chosenDessertId
+    console.log(transientState)
+}
+
 export const setDrink = (chosenDrink) => {
     transientState.drinkId = chosenDrink
     console.log(transientState)
 }
 
-export const setDessert = (chosenDessert) => {
-    transientState.dessertId = chosenDessert
-    console.log(transientState)
-}
 
 
 
@@ -37,11 +38,12 @@ export const saveOrder = async () => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(transientState)
-    }
+
+}
 
 
-    // Send the transient state to your API
-    const response = await fetch("http://localhost:8088/orders", postOptions)
-    const customEvent = new CustomEvent("newOrder")
-    document.dispatchEvent(customEvent)
+  // Send the transient state to your API
+  const response = await fetch("http://localhost:8088/orders", postOptions)
+  const customEvent = new CustomEvent("newOrder")
+  document.dispatchEvent(customEvent)
 }
