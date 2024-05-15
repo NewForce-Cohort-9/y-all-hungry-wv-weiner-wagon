@@ -58,6 +58,10 @@ container.innerHTML = composedHTML
 
 }
 
+<<<<<<< HEAD
 render()
 
 
+=======
+render()
+>>>>>>> main
