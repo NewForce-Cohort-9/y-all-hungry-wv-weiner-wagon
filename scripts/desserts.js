@@ -37,3 +37,12 @@ export const dessertOptions = async () => {
     return dessertHTML
 }
 
+// let chosenLocationId = 0;
+// const handlelcoationchangeforfoods = (change) => {
+//     if (change.taRGET.id === 'lcoation'){
+//         chosenlocationId = parseInt(change.target.value)
+//         foodsAvailable();
+
+
+//     }
+// }
