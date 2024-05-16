@@ -3,7 +3,7 @@ export const transientState = {
     "locationId": 0,
     "foodId": 0,
     "drinkId": 0,
-    "dessertId": 0
+    "dessertId": 0,
 }
 
 //add the required setter functions to create your order
@@ -28,7 +28,6 @@ export const setDrink = (chosenDrink) => {
     const customEvent = new CustomEvent("newDrink")
     document.dispatchEvent(customEvent)
 }
-
 /*export const setOrder = (chosenOrder) => {
     transientState.orderId = chosenOrder
     console.log(transientState)
