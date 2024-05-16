@@ -18,7 +18,6 @@ const handleLocationChange = (changeEvent) => {
         const location = locations.find(location => parseInt(changeEvent.target.value) === location.id);
 
         setLocation(location.id)
-
         // Add a message about where the user is picking up based on their selection
         container.innerHTML = `You're picking up from the ${location.name} location`;
     }
