@@ -50,6 +50,21 @@ export const saveOrder = async () => {
 
   // Send the transient state to your API
   const response = await fetch("http://localhost:8088/orders", postOptions)
+  const orderId = await response.json()
+
+  const total = document.querySelector("#total")
+
+  console.log(total.innerHTML)
+
+  const changeHead = document.querySelector("#orderHead")
+  changeHead.innerHTML = `Order Up!`
+
+  const orderBottom = document.querySelector("#orderBottom")
+  orderBottom.innerHTML = `<h3>Your order has been placed!</h3>
+                           <div>Order Number: ${orderId.id}, Order ${total.innerHTML}</div>
+                           <button id='newOrder'>Place Another Order</button>`
+
   const customEvent = new CustomEvent("newOrder")
   document.dispatchEvent(customEvent)
 }
+
