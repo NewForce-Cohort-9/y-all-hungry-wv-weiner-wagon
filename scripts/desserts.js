@@ -6,14 +6,16 @@ export const dessertOptions = async () => {
 
     const handleDessertChange = (changeEvent) => {
         if(changeEvent.target.id === 'dessert') {
-    
+            
             let container = document.querySelector("#locationDessert")
-    
+            //const locationId = document.querySelector(#locationId)
+            //console.log(locationId.value)
             const dessertChoice = desserts.find(dessert => parseInt(changeEvent.target.value) === dessert.id)
             
             setDessert(dessertChoice.id)
     
             container.innerHTML = `Dessert Choice: ${dessertChoice.name}`
+            // container.innerHTML = `div id=locationId` VALUE %{VALUE.ID}
         }
     
     }
