@@ -1,3 +1,4 @@
+import { setDessertPrice } from "./subtotal.js"
 import { setDessert } from "./transientState.js"
 
 export const dessertOptions = async () => {
@@ -12,8 +13,9 @@ export const dessertOptions = async () => {
             const dessertChoice = desserts.find(dessert => parseInt(changeEvent.target.value) === dessert.id)
             
             setDessert(dessertChoice.id)
+            setDessertPrice(dessertChoice.price)
     
-            container.innerHTML = `Dessert Choice: ${dessertChoice.name}`
+            container.innerHTML = `${dessertChoice.name}`
         }
     
     }
@@ -33,7 +35,6 @@ export const dessertOptions = async () => {
     dessertHTML += '<option value="5">None</option>'
     dessertHTML += arrayOfDesserts.join("")
     dessertHTML += "</select>"
-    dessertHTML += '<div id="locationDessert"></div>'
     return dessertHTML
 }
 

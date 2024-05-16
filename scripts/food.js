@@ -1,3 +1,4 @@
+import { setFoodPrice } from "./subtotal.js"
 import { setFood } from "./transientState.js"
 
 
@@ -13,8 +14,9 @@ export const foodChoices = async () => {
         const foodChoice = foods.find(food => parseInt(changeEvent.target.value) === food.id)
   
         setFood(foodChoice.id)
+        setFoodPrice(foodChoice.price)
   
-        containerF.innerHTML = `Chosen Food: ${foodChoice.name}`
+        containerF.innerHTML = `${foodChoice.name}`
   
     }
 
@@ -38,7 +40,6 @@ foodHTML += '<option value="6">None</option>'
 
 foodHTML += foodsArray.join(" ")
 foodHTML += "</select>"
-foodHTML += '<div id="locationFood"></div>'
 
 return foodHTML
 
