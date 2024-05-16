@@ -27,10 +27,10 @@ export const setDrink = (chosenDrink) => {
     console.log(transientState)
 }
 
-export const setOrder = (chosenOrder) => {
+/*export const setOrder = (chosenOrder) => {
     transientState.orderId = chosenOrder
     console.log(transientState)
-}
+}*/
 
 
 

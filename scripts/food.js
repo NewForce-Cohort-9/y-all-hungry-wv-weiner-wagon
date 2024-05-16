@@ -42,4 +42,4 @@ foodHTML += '<div id="locationFood"></div>'
 
 return foodHTML
 
-} 
+}
