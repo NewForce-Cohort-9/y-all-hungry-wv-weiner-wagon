@@ -1,4 +1,4 @@
-import { setFood } from "./transientState.js"
+
 
 
 export const foodChoices = async () => {
