@@ -25,13 +25,15 @@ export const setDessert = (chosenDessertId) => {
 export const setDrink = (chosenDrink) => {
     transientState.drinkId = chosenDrink
     console.log(transientState)
+    const customEvent = new CustomEvent("newDrink")
+    document.dispatchEvent(customEvent)
 }
 
 /*export const setOrder = (chosenOrder) => {
     transientState.orderId = chosenOrder
     console.log(transientState)
 }*/
-
+// export const subtotal = (transientState) =
 
 
 export const saveOrder = async () => {
