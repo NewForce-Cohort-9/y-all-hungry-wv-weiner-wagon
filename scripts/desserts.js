@@ -5,9 +5,11 @@ let chosenLocationId = 0
 
 const handleLocationChangeForDessert = (change) => {
     if(change.target.id === 'locationDropdown') {
-   chosenLocationId = transientState.locationId;
+        const locationHTML = document.querySelector("#locationDropdown")
+        chosenLocationId = transientState.locationId;
         const customEventDesserts = new CustomEvent("newLocationSelectedDesserts");
         document.dispatchEvent(customEventDesserts)
+        document.querySelector("#locationDropdown").innerHTML = locationHTML
     }
 }
 

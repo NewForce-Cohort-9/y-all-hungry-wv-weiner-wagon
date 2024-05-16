@@ -47,6 +47,10 @@ export const saveOrder = async () => {
 
 }
 
+  if (transientState.locationId === 0 || transientState.foodId === 0 || transientState.drinkId === 0 || transientState.dessertId === 0) {
+    window.alert("You must select a pickup location, food, drink, and dessert to complete your order!")
+    return
+  }
 
   // Send the transient state to your API
   const response = await fetch("http://localhost:8088/orders", postOptions)
