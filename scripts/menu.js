@@ -1,32 +1,38 @@
-import { setOrder } from "./transientState.js"; // Assuming you have a function to fetch the menu items from the database
+export const foodLocation = async () => {
+  const response = await fetch("http://localhost:8088/locationFoodMenu?_expand=food")
+  const foods = await response.json()
 
-export const showMenuAtLocation = async (locationId) => {
-  try {
-    // Fetch the menu items from the database
-    const menu = await setOrder();
+  const handleFoodChange = (changeEvent) => {
+    if (changeEvent.target.id === 'food') {
 
-    // Filter the menu items to include only those available at the specified location
-    const menuAtLocation = menu.filter(item => {
-      return item.availableLocations.includes(locationId);
-    });
+        let containerF = document.querySelector("#locationFood")
+  
+        const foodChoice = foods.find(food => parseInt(changeEvent.target.value) === food.id)
+  
+        setFood(foodChoice.id)
+  
+        containerF.innerHTML = `Chosen Food: ${foodChoice.name}`
+  
+    }
 
-    // Generate HTML for the menu items
-    const menuHTML = menuAtLocation.map(item => {
-      return `
-        <div class="menu-item">
-          <h3>${item.name}</h3>
-          <p>${item.description}</p>
-          <p>Price: $${item.price}</p>
-        </div>
-      `;
-    }).join('');
-
-    // Return the HTML to display the menu items at the specified location
-    return menuHTML;
-  } catch (error) {
-    console.error('Error fetching menu items:', error);
-    return ''; // Return empty string in case of error
   }
-};
 
-//This might not be right... just trying things out thanks to the help of CHAT GPT
+}
+
+let orderHTML = ""
+
+
+const divStringArray = await orders.map(
+    (singleOrder) => {
+        // console.log(singleOrder)
+
+        const orderPrice = singleOrder?.metal?.price + singleOrder?.size?.price + singleOrder?.style?.price
+        return `<div>
+        Order: $${orderPrice}
+        </div>`
+    }
+)
+
+orderHTML += divStringArray.join("")
+
+return orderHTML
