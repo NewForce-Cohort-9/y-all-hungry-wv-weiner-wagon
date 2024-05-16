@@ -2,11 +2,7 @@
   "locations": [
     {
       "id": 1,
-<<<<<<< HEAD
-      "name": "Ur Momma's House"
-=======
       "name": "ur momma's house"
->>>>>>> main
     },
     {
       "id": 2,
@@ -14,11 +10,7 @@
     },
     {
       "id": 3,
-<<<<<<< HEAD
-      "name": "Middle of the Woods"
-=======
       "name": "middle of the woods"
->>>>>>> main
     }
   ],
   "foods": [
@@ -54,41 +46,25 @@
   "drinks": [
     {
       "id": 1,
-<<<<<<< HEAD
-      "name": "Sweet Tea",
-=======
       "name": "sweet tea",
->>>>>>> main
       "price": 1,
       "image": "https://www.allrecipes.com/thmb/REETjYFdVRmMtwVHPT66VmQVmmI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/109190-smooth-sweet-tea-DDMFS-4x3-9e849a386d414cb2b852099f02b6782d.jpg"
     },
     {
       "id": 2,
-<<<<<<< HEAD
-      "name": "Water",
-=======
       "name": "water",
->>>>>>> main
       "price": 0.5,
       "image": "https://images.thdstatic.com/productImages/2c12c804-7728-4112-9a79-d3dbb0c33548/svn/dasani-water-049000026566-64_600.jpg"
     },
     {
       "id": 3,
-<<<<<<< HEAD
-      "name": "Bubble Tea",
-=======
       "name": "bubble tea",
->>>>>>> main
       "price": 3,
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2022/06/Bubble-Tea-81ba83b.png"
     },
     {
       "id": 4,
-<<<<<<< HEAD
-      "name": "Pop",
-=======
       "name": "pop",
->>>>>>> main
       "price": 2,
       "image": "https://m.media-amazon.com/images/I/91iFMPtXsIL.jpg"
     }
@@ -96,44 +72,28 @@
   "desserts": [
     {
       "id": 1,
-<<<<<<< HEAD
-      "name": "Brownie with Vanilla Ice Cream",
-=======
       "name": "brownie with vanilla ice cream",
->>>>>>> main
       "price": 4,
       "image": "https://www.thereciperebel.com/wp-content/uploads/2022/05/brownie-sundae-TRR-1200-25-of-40.jpg",
       "description": "big sexy brownie topped with vanilla ice cream"
     },
     {
       "id": 2,
-<<<<<<< HEAD
-      "name": "Oreo Ice Cream",
-=======
       "name": "oreo ice cream",
->>>>>>> main
       "price": 3,
       "image": "https://n5d6q8j8.rocketcdn.me/wp-content/uploads/2023/05/oreo-ice-cream-scoops-spoon-glass-dish.jpg",
       "description": "oreo flavored ice cream....duh"
     },
     {
       "id": 3,
-<<<<<<< HEAD
-      "name": "Chocolate Cake",
-=======
       "name": "chocolate cake",
->>>>>>> main
       "price": 4,
       "image": "https://sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg",
       "description": "rich and moist chocolately goodness"
     },
     {
       "id": 4,
-<<<<<<< HEAD
-      "name": "Coke Float",
-=======
       "name": "coke float",
->>>>>>> main
       "price": 5,
       "image": "https://www.liquor.com/thmb/xKmU7Jspw82ve4lnV5MNLi5y19w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/boozy-rootbeer-float-720x720-primary-86031db0158b4d03bc74392767244438.jpg",
       "description": "big ole' chilled mug with vanilla ice cream and lots of coke"
@@ -309,13 +269,6 @@
   ],
   "orders": [
     {
-<<<<<<< HEAD
-      "locationId": 2,
-      "foodId": 1,
-      "drinkId": 2,
-      "dessertId": 3,
-      "id": 1
-=======
       "locationId": 3,
       "foodId": 1,
       "drinkId": 3,
@@ -384,7 +337,6 @@
       "drinkId": 1,
       "dessertId": 2,
       "id": 10
->>>>>>> main
     }
   ]
 }
