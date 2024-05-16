@@ -1,13 +1,21 @@
-import { setDrink } from "./transientState.js"
+import { setDrink, transientState } from "./transientState.js"
 import { setDrinkPrice } from "./subtotal.js"
 
+let chosenLocationId = 0
 
-
-
+const handleLocationChangeForDrink = (change) => {
+    if(change.target.id === 'locationDropdown') {
+   chosenLocationId = transientState.locationId;
+        const customEventDrinks = new CustomEvent("newLocationSelectedDrinks");
+        document.dispatchEvent(customEventDrinks)
+    }
+}
 
 export const DrinkOptions = async() => {
     const response = await fetch("http://localhost:8088/drinks")
     const drinks = await response.json()
+    const locationDrinkResponse = await fetch("http://localhost:8088/locationDrinkMenu?_expand=drink")
+    const locationDrinks = await locationDrinkResponse.json()
     
     const handleDrinkChange = (changeEvent) => {
         if(changeEvent.target.id === 'drink') {
@@ -25,14 +33,17 @@ export const DrinkOptions = async() => {
     }
     
     document.addEventListener("change", handleDrinkChange)
+    document.addEventListener("change", handleLocationChangeForDrink)
+
+    const locationDrinkChoice = locationDrinks.filter(singleDrink => transientState.locationId === singleDrink.locationId)
 
     let drinkChoicesHTML = ""
 
     drinkChoicesHTML += '<select id="drink">'
     drinkChoicesHTML += '<option value="0">Select a Drink</option>'
 
-    const arrayOfDrinks = drinks.map( (drink) => {
-            return `<option value="${drink.id}">${drink.name}</option>`
+    const arrayOfDrinks = locationDrinkChoice.map( (drink) => {
+            return `<option value="${drink?.drink.id}">${drink?.drink.name}</option>`
 
         }
 
