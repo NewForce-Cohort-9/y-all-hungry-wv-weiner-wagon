@@ -35,7 +35,7 @@ export const newSubtotal = async () => {
         currency: "USD"
     })
 
-    let insert = document.querySelector("#subtotal")
+    let subtotalHTML = document.querySelector("#subtotal")
 
-    insert.innerHTML = `Subtotal: ${subtotal}`
+    subtotalHTML.innerHTML = `Subtotal: ${subtotal}`
 }

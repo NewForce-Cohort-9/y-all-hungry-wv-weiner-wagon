@@ -54,7 +54,7 @@ export const render = async () => {
                 <h3 class='asideText'>Dessert</h3>
             </div>
             <div class='orderBottom'>
-                <div class='asideText' id='subtotal'>Subtotal: ${sub}</div>
+                <div id='subtotal'>Subtotal: ${sub}</div>
                 ${placeUserOrder}
             </div>
         </aside>
