@@ -2,7 +2,7 @@ import { saveOrder } from "./transientState.js"
 
 // Define a function to handle a user placing an order
 const handleOrder = (clickEvent) => {
-    if (clickEvent.target.id === 'saveOrder') {
+    if (clickEvent.target.id === 'placeOrder') {
         saveOrder();
     }
 }
