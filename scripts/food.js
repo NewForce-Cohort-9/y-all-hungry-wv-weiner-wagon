@@ -8,7 +8,7 @@ export const foodChoices = async () => {
   const handleFoodChange = (changeEvent) => {
     if (changeEvent.target.id === 'food') {
 
-        const containerF = document.querySelector("#locationFood")
+        let containerF = document.querySelector("#locationFood")
   
         const foodChoice = foods.find(food => parseInt(changeEvent.target.value) === food.id)
   
