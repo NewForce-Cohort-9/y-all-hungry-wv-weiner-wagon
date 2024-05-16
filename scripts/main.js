@@ -47,7 +47,7 @@ export const render = async () => {
 
         <aside class='displayOrder'>
             <div>
-                <h1 class='asideText header'>Order Up!</h1>
+                <h1 id='orderHead' class='asideText header'>Order</h1>
                 <div id='locationMessage'></div>
                 <h3 class='asideText'>Food</h3>
                 <h5 class='asideText' id="locationFood"></h5>
@@ -56,7 +56,7 @@ export const render = async () => {
                 <h3 class='asideText'>Dessert</h3>
                 <h5 class='asideText' id="locationDessert"></h5>
             </div>
-            <div class='orderBottom'>
+            <div id='orderBottom' class='orderBottom'>
                 <div id='subtotal'>Subtotal: ${sub}</div>
                 <div id='tax'>tax: $0.00</div>
                 <div id='total'>total: $0.00</div>
@@ -70,6 +70,14 @@ container.innerHTML = composedHTML
 
 }
 document.addEventListener("newLocationSelectedDesserts", render)
+
+const handleNewOrderClick = (clickEvent) => {
+    if (clickEvent.target.id === 'newOrder') {
+        render()
+    }
+}
+
+document.addEventListener("click", handleNewOrderClick)
 
 render()
 
