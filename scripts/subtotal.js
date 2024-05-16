@@ -7,14 +7,14 @@ const transientStateSubtotal = {
 
 
 
-export const setFoodPrice = (chosenFoodId) => {
-    transientStateSubtotal.dessertPrice = chosenFoodId
+export const setFoodPrice = (chosenFood) => {
+    transientStateSubtotal.dessertPrice = chosenFood
     console.log(transientStateSubtotal)
     newSubtotal()
 }
 
-export const setDessertPrice = (chosenDessertId) => {
-    transientStateSubtotal.dessertId = chosenDessertId
+export const setDessertPrice = (chosenDessert) => {
+    transientStateSubtotal.dessertId = chosenDessert
     console.log(transientStateSubtotal)
     newSubtotal()
 }

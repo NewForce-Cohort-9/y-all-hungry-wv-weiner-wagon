@@ -53,6 +53,7 @@ export const render = async () => {
                 <h3 class='asideText'>Drink</h3>
                 <h5 class='asideText' id="locationDrink"></h5>
                 <h3 class='asideText'>Dessert</h3>
+                <h5 class='asideText' id="locationDessert"></h5>
             </div>
             <div class='orderBottom'>
                 <div id='subtotal'>Subtotal: ${sub}</div>
