@@ -1,5 +1,5 @@
-import { setDrinkPrice } from "./test.js"
 import { setDrink } from "./transientState.js"
+import { setDrinkPrice } from "./subtotal.js"
 
 
 

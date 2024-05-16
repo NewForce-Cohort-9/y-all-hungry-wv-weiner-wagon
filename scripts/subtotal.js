@@ -1,42 +1,41 @@
-export const subtotal = () => {
+//add the required properties to the object below for your order
+const transientStateSubtotal = {
+    "foodPrice": 0,
+    "drinkPrice": 0,
+    "dessertPrice": 0,
+}
 
-    let orderSubtotal = 0;
-    let drinkPrice = 0
 
-    const addDrinkToSubtotal = async (changeEvent) => {
-        // Fetch drink info
-        const response = await fetch("http://localhost:8088/drinks");
-        // Clean that data
-        const drinks = await response.json();
-    
-        if (changeEvent.target.id === 'drink') {
-            // Drink object
-            const drinkP = drinks.find(drink => parseInt(changeEvent.target.value) === drink.id);
-        
-            // Pull price from drink object
-            drinkPrice = drinkP.price;
-    
-            // Check
-            console.log(drinkPrice, "drink prince")
-        }
-    console.log(orderSubtotal, "subtotal")
-    
-    orderSubtotal = drinkPrice;
 
-    orderSubtotal = orderSubtotal.toLocaleString("en-US", {
+export const setFoodPrice = (chosenFoodId) => {
+    transientStateSubtotal.dessertPrice = chosenFoodId
+    console.log(transientStateSubtotal)
+    newSubtotal()
+}
+
+export const setDessertPrice = (chosenDessertId) => {
+    transientStateSubtotal.dessertId = chosenDessertId
+    console.log(transientStateSubtotal)
+    newSubtotal()
+}
+
+export const setDrinkPrice = (chosenDrink) => {
+    transientStateSubtotal.drinkPrice = chosenDrink
+    console.log(transientStateSubtotal)
+    newSubtotal()
+}
+
+
+
+export const newSubtotal = async () => {
+    let subtotal = transientStateSubtotal.foodPrice + transientStateSubtotal.dessertPrice + transientStateSubtotal.drinkPrice
+
+    subtotal = subtotal.toLocaleString("en-US", {
         style: "currency",
         currency: "USD"
     })
-    return orderSubtotal
-    }
 
-    document.addEventListener("change", addDrinkToSubtotal)    
-    
-    // (event)
-    // orderSubtotal = drinkPrice;
-    
-    
-    
-    return orderSubtotal;
+    let subtotalHTML = document.querySelector("#subtotal")
+
+    subtotalHTML.innerHTML = `Subtotal: ${subtotal}`
 }
-    

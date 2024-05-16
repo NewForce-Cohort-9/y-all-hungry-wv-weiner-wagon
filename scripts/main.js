@@ -3,19 +3,20 @@ import { DrinkOptions } from "./drinks.js";
 import { foodChoices } from "./food.js"
 import { getLocations } from "./locations.js";
 import { placeOrder } from "./saveOrder.js";
-import { subtotal } from "./subtotal.js";
-import { newSubtotal } from "./test.js";
+import { newSubtotal } from "./subtotal.js";
 
 const container = document.querySelector("#container")
 
-    
+let sub = 0
+
 export const render = async () => {
   const foodHTML = await foodChoices()
   const drinkOptionsHTML = await DrinkOptions()
   const locationDropdown = await getLocations()
   const placeUserOrder = await placeOrder()
   const dessertHTML = await dessertOptions()
-  const sub = await newSubtotal()
+
+
 
 
   const composedHTML = `
@@ -66,3 +67,5 @@ container.innerHTML = composedHTML
 }
 
 render()
+
+sub = await newSubtotal()
