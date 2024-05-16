@@ -10,9 +10,9 @@ const container = document.querySelector("#container")
 let sub = '$0.00'
 
 export const render = async () => {
+    const locationDropdown = await getLocations()
   const foodHTML = await foodChoices()
   const drinkOptionsHTML = await DrinkOptions()
-  const locationDropdown = await getLocations()
   const placeUserOrder = await placeOrder()
   const dessertHTML = await dessertOptions()
 
@@ -69,6 +69,7 @@ export const render = async () => {
 container.innerHTML = composedHTML
 
 }
+document.addEventListener("newLocationSelectedDesserts", render)
 
 render()
 
