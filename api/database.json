@@ -99,5 +99,170 @@
     "description": "big ole' chilled mug with vanilla ice cream and lots of coke"
     }
     ],
+
+    "locationFoodMenu": [
+        {
+            "id": 1,
+            "locationId": 1,
+            "quantity": 25,
+            "foodId": 1
+        },{
+            "id": 2,
+            "locationId": 1,
+            "quantity": 20,
+            "foodId":  2
+        },{
+            "id": 3,
+            "locationId": 1,
+            "quantity": 30,
+            "foodId": 4
+        },{
+            "id": 4,
+            "locationId": 2,
+            "quantity": 50,
+            "foodId": 1
+        },{
+            "id": 5,
+            "locationId": 2,
+            "quantity": 30,
+            "foodId": 3
+        },{
+            "id": 6,
+            "locationId": 2,
+            "quantity": 15,
+            "foodId": 4
+        },
+        {
+            "id": 7,
+            "locationId": 3,
+            "quantity": 15,
+            "foodId": 1
+        },
+        {
+            "id": 8,
+            "locationId": 3,
+            "quantity": 25,
+            "foodId": 3
+        },
+        {
+            "id": 9,
+            "locationId": 3,
+            "quantity": 29,
+            "foodId": 4
+        }
+    ],
+    "locationDrinkMenu": [
+        {
+            "id": 1,
+            "locationId": 1,
+            "quantity": 25,
+            "drinkId": 1
+        },
+        {
+            "id": 2,
+            "locationId": 1,
+            "quantity": 100,
+            "drinkId": 2
+        },
+        {
+            "id": 3,
+            "locationId": 1,
+            "quantity": 45,
+            "drinkId": 3
+        },
+        {
+            "id": 4,
+            "locationId": 2,
+            "quantity": 50,
+            "drinkId": 2
+        },
+        {
+            "id": 5,
+            "locationId": 2,
+            "quantity": 30,
+            "drinkId": 3
+        },
+        {
+            "id": 6,
+            "locationId": 2,
+            "quantity": 15,
+            "drinkId": 4
+        },
+        {
+            "id": 7,
+            "locationId": 3,
+            "quantity": 45,
+            "drinkId": 1
+        },
+        {
+            "id": 8,
+            "locationId": 3,
+            "quantity": 24,
+            "drinkId": 2
+        },
+        {
+            "id": 9,
+            "locationId": 3,
+            "quantity": 42,
+            "drinkId": 4
+        },
+        
+    ],
+    "locationDessertMenu": [
+        {
+            "id": 1,
+            "locationId": 1,
+            "quantity": 100,
+            "dessertId": 1
+        },
+        {
+            "id": 2,
+            "locationId": 1,
+            "quantity": 45,
+            "dessertId": 2
+        },
+        {
+            "id": 3,
+            "locationId": 1,
+            "quantity": 10,
+            "dessertId": 3
+        },
+        {
+            "id": 4,
+            "locationId": 2,
+            "quantity": 25,
+            "dessertId": 2
+        },
+        {
+            "id": 5,
+            "locationId": 2,
+            "quantity": 26,
+            "dessertId": 3
+        },
+        {
+            "id": 6,
+            "locationId": 2,
+            "quantity": 5,
+            "dessertId": 4
+        },
+        {
+            "id": 7,
+            "locationId": 3,
+            "quantity": 23,
+            "dessertId": 1
+        },
+        {
+            "id": 8,
+            "locationId": 3,
+            "quantity": 31,
+            "dessertId": 2
+        },
+        {
+            "id": 9,
+            "locationId": 3,
+            "quantity": 28,
+            "dessertId": 4
+        }
+    ],
     "orders": []
 }
