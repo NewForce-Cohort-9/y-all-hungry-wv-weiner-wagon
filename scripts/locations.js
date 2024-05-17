@@ -1,3 +1,4 @@
+import { setLocationForMenu } from "./menu.js";
 import { setLocation } from "./transientState.js";
 
 // Fetch data from db

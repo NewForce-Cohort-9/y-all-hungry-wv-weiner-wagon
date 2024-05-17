@@ -1,32 +1,41 @@
-import { setOrder } from "./transientState.js"; // Assuming you have a function to fetch the menu items from the database
+const locationTransientState = {
+  "locationId": 0
+}
 
-export const showMenuAtLocation = async (locationId) => {
-  try {
-    // Fetch the menu items from the database
-    const menu = await setOrder();
+const drinkResponse = await fetch("http://localhost:8088/locationDrinkMenu?_expand=drink")
+const dessertResponse = await fetch("http://localhost:8088/locationDessertMenu?_expand=dessert")
+const foodResponse = await fetch("http://localhost:8088/locationFoodMenu?_expand=food")
 
-    // Filter the menu items to include only those available at the specified location
-    const menuAtLocation = menu.filter(item => {
-      return item.availableLocations.includes(locationId);
-    });
+const drinkMenu = await drinkResponse.json()
+const allDessertMenu = await dessertResponse.json()
+const foodMenu = await foodResponse.json()
 
-    // Generate HTML for the menu items
-    const menuHTML = menuAtLocation.map(item => {
-      return `
-        <div class="menu-item">
-          <h3>${item.name}</h3>
-          <p>${item.description}</p>
-          <p>Price: $${item.price}</p>
-        </div>
-      `;
-    }).join('');
 
-    // Return the HTML to display the menu items at the specified location
-    return menuHTML;
-  } catch (error) {
-    console.error('Error fetching menu items:', error);
-    return ''; // Return empty string in case of error
+export const setLocationForMenu = (locationId) => {
+  locationTransientState.locationId = locationId
+  // setDrinkMenu()
+  setDessertMenu()
+  // setFoodMenu()
+}
+
+const setDessertMenu = () => {
+  let dessertMenu = []
+  for (const dessert of allDessertMenu) {
+    dessertMenu.push(dessert)
   }
-};
+  dessertMenu = dessertMenu.filter(dessert => dessert.locationId === locationTransientState.locationId)
 
-//This might not be right... just trying things out thanks to the help of CHAT GPT
+  let dessertDropdown = document.querySelector("#dessert")
+  console.log(allDessertMenu)
+  console.log(dessertMenu)
+
+  let dropdownHTML = `<option value="0">Select a dessert</option>`
+
+  dessertMenu.forEach(dessert => {
+    dropdownHTML += `<option value="${dessert.id}">${dessert.name}</option>`
+  });
+
+  dropdownHTML.join("")
+
+  return dessertDropdown = dropdownHTML
+}
