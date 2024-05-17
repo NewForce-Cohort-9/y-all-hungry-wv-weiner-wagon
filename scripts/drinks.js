@@ -3,8 +3,6 @@ import { setDrinkPrice } from "./subtotal.js"
 
 let chosenLocationId = 0
 
-<<<<<<< HEAD
-=======
 const handleLocationChangeForDrink = (change) => {
     if(change.target.id === 'locationDropdown') {
    chosenLocationId = transientState.locationId;
@@ -12,7 +10,6 @@ const handleLocationChangeForDrink = (change) => {
         document.dispatchEvent(customEventDrinks)
     }
 }
->>>>>>> main
 
 export const DrinkOptions = async() => {
     const response = await fetch("http://localhost:8088/drinks")

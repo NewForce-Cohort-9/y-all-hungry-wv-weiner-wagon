@@ -28,13 +28,14 @@ export const foodChoices = async () => {
         setFood(foodChoice.id)
         setFoodPrice(foodChoice.price)
 
-        container.innerHTML = `<img src="${food?.image}"`>`Food Choice: ${foodChoice.name}`
+        containerF.innerHTML = `<img class="pic" src="${foodChoice.image}">${foodChoice.name}`
   
     }
 
   }
-  document.addEventListener ("change", handleLocationChangeForFood)
+  
   document.addEventListener("change", handleFoodChange)
+  //document.addEventListener ("change", handleLocationChangeForFood)
 
   const locationFoodChoice = locationFoods.filter(singleFood => transientState.locationId === singleFood.locationId)
   
@@ -57,3 +58,5 @@ foodHTML += "</select>"
 return foodHTML
 
 }
+
+

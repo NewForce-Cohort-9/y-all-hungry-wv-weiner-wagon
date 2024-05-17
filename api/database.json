@@ -274,13 +274,19 @@
     }
   ],
   "orders": [
-    
     {
       "locationId": 1,
       "foodId": 1,
       "drinkId": 1,
       "dessertId": 1,
       "id": 1
+    },
+    {
+      "locationId": 1,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 2,
+      "id": 2
     }
   ]
 }
