@@ -1,7 +1,7 @@
 import { setLocation } from "./transientState.js";
 
 // Fetch data from db
-const fetchResponse = await fetch("http://localhost:8088/locations");
+const fetchResponse = await fetch("http://localhost:8088/locations")
 // Clean data to JS object
 const locations = await fetchResponse.json();
 
