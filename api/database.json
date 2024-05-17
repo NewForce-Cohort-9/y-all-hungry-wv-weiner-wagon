@@ -67,12 +67,6 @@
       "name": "pop",
       "price": 2,
       "image": "https://m.media-amazon.com/images/I/91iFMPtXsIL.jpg"
-    },
-    {
-      "id": 5,
-      "name": "None",
-      "price": 0,
-      "image": "https://t4.ftcdn.net/jpg/03/14/29/87/360_F_314298704_7P8ehu2dzJHxvmDrzldCB7nuM0Fff0cd.jpg"
     }
   ],
   "desserts": [
@@ -363,14 +357,35 @@
       "foodId": 1,
       "drinkId": 1,
       "dessertId": 1,
-      "id": 1
+      "id": 13
     },
     {
-      "locationId": 1,
-      "foodId": 0,
-      "drinkId": 0,
+      "locationId": 2,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 3,
+      "id": 14
+    },
+    {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 2,
       "dessertId": 2,
-      "id": 2
+      "id": 15
+    },
+    {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 4,
+      "id": 16
+    },
+    {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 1,
+      "id": 17
     }
   ]
 }

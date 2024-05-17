@@ -76,4 +76,3 @@ export const saveOrder = async () => {
   const customEvent = new CustomEvent("newOrder")
   document.dispatchEvent(customEvent)
 }
-
