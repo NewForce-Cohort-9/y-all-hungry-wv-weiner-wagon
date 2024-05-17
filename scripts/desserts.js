@@ -5,9 +5,11 @@ let chosenLocationId = 0
 
 const handleLocationChangeForDessert = (change) => {
     if(change.target.id === 'locationDropdown') {
-   chosenLocationId = transientState.locationId;
+        const locationHTML = document.querySelector("#locationDropdown")
+        chosenLocationId = transientState.locationId;
         const customEventDesserts = new CustomEvent("newLocationSelectedDesserts");
         document.dispatchEvent(customEventDesserts)
+        document.querySelector("#locationDropdown").innerHTML = locationHTML
     }
 }
 
@@ -44,7 +46,7 @@ export const dessertOptions = async () => {
 
     let dessertHTML = ""
 
-    dessertHTML += '<select id="dessert">'
+    dessertHTML += '<select class="btn btn-info" id="dessert">'
     dessertHTML += '<option value="0">Select a dessert</option>'
 
     const arrayOfDesserts = locationDessertChoice.map( (dessert) => {
