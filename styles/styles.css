@@ -52,3 +52,8 @@
 #placeOrder {
     margin: 1em;
 }
+
+.pic {
+    height: 5rem;
+    width: auto;
+}
