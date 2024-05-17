@@ -50,7 +50,7 @@ const foodsArray = locationFoodChoice.map( (food) => {
 
 )
 
-foodHTML += '<option value="6">None</option>'
+foodHTML += '<option value="5">None</option>'
 
 foodHTML += foodsArray.join(" ")
 foodHTML += "</select>"
