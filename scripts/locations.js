@@ -33,7 +33,7 @@ export const getLocations = async () => {
     const container = document.querySelector("#container");
 
     // Begin building a dropdown to select a location to pick up from
-    let locationDropdown = `<select id='locationDropdown'>
+    let locationDropdown = `<select class='btn btn-info' id='locationDropdown'>
                             <option selected='true' disabled='disabled' value='0'>Select A Pickup Location</option>`;
 
     // Use .forEach() to iterate through the locations array to pull location info for each 

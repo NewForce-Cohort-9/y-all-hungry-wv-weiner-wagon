@@ -46,10 +46,19 @@ export const saveOrder = async () => {
 
 }
 
+  if (transientState.locationId === 0 || transientState.foodId === 0 || transientState.drinkId === 0 || transientState.dessertId === 0) {
+    window.alert("You must select a pickup location, food, drink, and dessert to complete your order!")
+    return
+  }
 
   // Send the transient state to your API
   const response = await fetch("http://localhost:8088/orders", postOptions)
   const orderId = await response.json()
+
+  const fetchResponse = await fetch("http://localhost:8088/locations")
+  const locations = await fetchResponse.json()
+
+  const location = locations.find(location => location.id === transientState.locationId)
 
   const total = document.querySelector("#total")
 
@@ -59,11 +68,10 @@ export const saveOrder = async () => {
   changeHead.innerHTML = `Order Up!`
 
   const orderBottom = document.querySelector("#orderBottom")
-  orderBottom.innerHTML = `<h3>Your order has been placed!</h3>
+  orderBottom.innerHTML = `<h5>Your order has been placed at the ${location.name} Location!</h5>
                            <div>Order Number: ${orderId.id}, Order ${total.innerHTML}</div>
-                           <button id='newOrder'>Place Another Order</button>`
+                           <button class="btn btn-danger" id='newOrder'>Place Another Order</button>`
 
   const customEvent = new CustomEvent("newOrder")
   document.dispatchEvent(customEvent)
 }
-

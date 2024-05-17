@@ -67,12 +67,6 @@
       "name": "pop",
       "price": 2,
       "image": "https://m.media-amazon.com/images/I/91iFMPtXsIL.jpg"
-    },
-    {
-      "id": 5,
-      "name": "None",
-      "price": 0,
-      "image": "https://t4.ftcdn.net/jpg/03/14/29/87/360_F_314298704_7P8ehu2dzJHxvmDrzldCB7nuM0Fff0cd.jpg"
     }
   ],
   "desserts": [
@@ -275,23 +269,144 @@
   ],
   "orders": [
     {
-      "locationId": 1,
+      "locationId": 3,
       "foodId": 1,
-      "drinkId": 1,
-      "dessertId": 1,
+      "drinkId": 3,
+      "dessertId": 4,
       "id": 1
     },
     {
-      "locationId": 1,
-<<<<<<< HEAD
+      "locationId": 0,
       "foodId": 1,
+      "drinkId": 1,
+      "dessertId": 4,
+      "id": 2
+    },
+    {
+      "locationId": 0,
+      "foodId": 1,
+      "drinkId": 1,
+      "dessertId": 4,
+      "id": 3
+    },
+    {
+      "locationId": 0,
+      "foodId": 1,
+      "drinkId": 3,
+      "dessertId": 3,
+      "id": 4
+    },
+    {
+      "locationId": 0,
+      "foodId": 2,
+      "drinkId": 1,
+      "dessertId": 3,
+      "id": 5
+    },
+    {
+      "locationId": 0,
+      "foodId": 3,
       "drinkId": 2,
-=======
+      "dessertId": 4,
+      "id": 6
+    },
+    {
+      "locationId": 0,
+      "foodId": 2,
+      "drinkId": 2,
+      "dessertId": 4,
+      "id": 7
+    },
+    {
+      "locationId": 0,
+      "foodId": 2,
+      "drinkId": 1,
+      "dessertId": 2,
+      "id": 8
+    },
+    {
+      "locationId": 1,
+      "foodId": 2,
+      "drinkId": 4,
+      "dessertId": 3,
+      "id": 9
+    },
+    {
+      "locationId": 2,
+      "foodId": 2,
+      "drinkId": 1,
+      "dessertId": 2,
+      "id": 10
+    },
+    {
+      "locationId": 2,
+      "foodId": 1,
+      "drinkId": 1,
+      "dessertId": 3,
+      "id": 11
+    },
+    {
+      "locationId": 3,
       "foodId": 0,
       "drinkId": 0,
->>>>>>> main
+      "dessertId": 0,
+      "id": 12
+    },
+    {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 1,
+      "dessertId": 1,
+      "id": 13
+    },
+    {
+      "locationId": 2,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 3,
+      "id": 14
+    },
+    {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 2,
       "dessertId": 2,
-      "id": 2
+      "id": 15
+    },
+    {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 4,
+      "id": 16
+    },
+    {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 1,
+      "id": 17
+    },
+    {
+      "locationId": 1,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 3,
+      "id": 18
+    },
+    {
+      "locationId": 2,
+      "foodId": 3,
+      "drinkId": 3,
+      "dessertId": 3,
+      "id": 19
+    },
+    {
+      "locationId": 2,
+      "foodId": 1,
+      "drinkId": 4,
+      "dessertId": 4,
+      "id": 20
     }
   ]
 }
