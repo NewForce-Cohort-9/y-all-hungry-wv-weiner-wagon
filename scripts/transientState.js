@@ -36,7 +36,7 @@ export const setDrink = (chosenDrink) => {
 
 
 //set quantity with PUT method by subtracting one from joined tables when order is complete
-export const changeQty = async (correctTable, quantity) => {
+export const changeQty = async (correctTable, quantity, tableId) => {
 
     const qtyPut = {
         method: "PATCH",
@@ -45,8 +45,8 @@ export const changeQty = async (correctTable, quantity) => {
         },
         body: JSON.stringify({quantity: quantity})
     }
-
-    const response = await fetch(`http://localhost:8088/${correctTable}`, qtyPut)
+    console.log(quantity)
+    const response = await fetch(`http://localhost:8088/${correctTable}/${tableId}`, qtyPut)
     const newQuantity = response.json()
     const customEvent = new CustomEvent("newQuantity")
     document.dispatchEvent(customEvent)

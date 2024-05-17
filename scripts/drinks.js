@@ -34,16 +34,24 @@ export const DrinkOptions = async() => {
     
     }
     const reduceQty = () => {
+        
+//   for(const singleDrink of locationDrinks){
+//     for (const singleOrder of orders){
 
-  for(const singleDrink of locationDrinks){
-    for (const singleOrder of orders){
+//         if(singleDrink.locationId === singleOrder.locationId && singleDrink.drinkId == singleOrder.drinkId){
+//             let drinkQty = singleDrink.quantity - 1
+//             changeQty("locationDrinkMenu", drinkQty, singleDrink.id)
+            
+//         }
+//     }
+//   }
 
-        if(singleDrink.Id === singleOrder.drinkId){
-    
-            changeQty("locationDrinkMenu", singleDrink.quantity -= 1)
+        for(const singleDrink of locationDrinks) {
+            if(transientState.locationId == singleDrink.locationId && transientState.drinkId == singleDrink.drinkId){
+                let drinkQty = singleDrink.quantity - 1
+             changeQty("locationDrinkMenu", drinkQty, singleDrink.id)
+            }
         }
-    }
-  }
 
     }
     
@@ -65,7 +73,7 @@ export const DrinkOptions = async() => {
 
     )
     
-    drinkChoicesHTML += '<option value="5">None</option>'
+
     
     drinkChoicesHTML += arrayOfDrinks.join("")
     drinkChoicesHTML += "</select>"

@@ -1,5 +1,5 @@
 import { setDessertPrice } from "./subtotal.js"
-import { setDessert, transientState } from "./transientState.js"
+import { setDessert, transientState, changeQty } from "./transientState.js"
 
 let chosenLocationId = 0
 
@@ -39,8 +39,23 @@ export const dessertOptions = async () => {
     
     }
 
+    const reduceQty = () => {
+        
+        
+                for(const singleDessert of locationDesserts) {
+                    if(transientState.locationId == singleDessert.locationId && transientState.dessertId == singleDessert.dessertId){
+                        let dessertQty = singleDessert.quantity - 1
+                     changeQty("locationDessertMenu", dessertQty, singleDessert.id)
+                    }
+                }
+        
+            }
+
+
     document.addEventListener("change", handleDessertChange)
     document.addEventListener("change", handleLocationChangeForDessert)
+
+    document.addEventListener("newOrder", reduceQty)
 
     const locationDessertChoice =  locationDesserts.filter(singleDessert => transientState.locationId === singleDessert.locationId)
 
