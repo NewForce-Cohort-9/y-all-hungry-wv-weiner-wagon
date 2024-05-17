@@ -27,7 +27,7 @@ export const DrinkOptions = async() => {
             setDrink(drinkChoice.id)
             setDrinkPrice(drinkChoice.price)
     
-            containerD.innerHTML = `${drinkChoice.name}`
+            containerD.innerHTML = `<img class="pic" src="${drinkChoice.image}">${drinkChoice.name}`
         }
     
     }
@@ -43,7 +43,7 @@ export const DrinkOptions = async() => {
     drinkChoicesHTML += '<option value="0">Select a Drink</option>'
 
     const arrayOfDrinks = locationDrinkChoice.map( (drink) => {
-            return `<option value="${drink?.drink.id}">${drink?.drink.name}</option>`
+            return `<option value="${drink?.drink.id}">${drink?.drink.name} - qty: ${drink.quantity}</option>`
 
         }
 
