@@ -20,7 +20,10 @@ export const render = async () => {
 
 
   const composedHTML = `
-    <h1>WV Weiner Wagon</h1>
+    <header class='headerTop'>
+        <img id='logoImg' src='./images/WV-Weiner-Wagon.png' alt='WV Weiner Wagon Logo'>
+        <h1>WV Weiner Wagon</h1>
+    </header>
     <div class='flexDisplay'>
         <article class="choices">
             <section class="choices__locations options">

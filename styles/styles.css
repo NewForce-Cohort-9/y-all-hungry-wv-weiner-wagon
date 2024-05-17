@@ -1,14 +1,25 @@
 .asideText {
     text-align: center;
     margin: 1em;
-}
-
-.button {
-
+    min-height: 3rem;
 }
 
 .choices {
     margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65%;
+    height: 90vh;
+}
+
+.choices__locations {
+    text-align: center;
+}
+
+#container {
+    background-color: #0022d2;
 }
 
 .displayOrder {
@@ -20,17 +31,31 @@
     width: 35%;
     height: 90vh;
     margin: 1em;
-    padding: 1em;
+    background-color: #ffb800;
+    color: black;
 }
 
 .flexDisplay {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    color: white;
 }
 
-.header {
+#logoImg {
+    width: 6em;
+    height: auto;
+    margin: 1em;
+}
+
+.headerTop {
+    display: flex;
+    flex-direction: row;
     justify-self: flex-start;
+    align-items: center;
+    text-shadow: white 0px 0px 10px;
+    background-image: url("https://i.pinimg.com/originals/23/11/d5/2311d5617d256a7e279df541ed424a7c.jpg");
+    padding: 1em;;
 }
 
 #locationDropdown {
