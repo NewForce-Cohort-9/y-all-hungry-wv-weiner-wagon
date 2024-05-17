@@ -363,28 +363,14 @@
       "foodId": 1,
       "drinkId": 1,
       "dessertId": 1,
-      "id": 13
+      "id": 1
     },
     {
-      "locationId": 2,
-      "foodId": 1,
-      "drinkId": 2,
-      "dessertId": 3,
-      "id": 14
-    },
-    {
-      "locationId": 3,
-      "foodId": 1,
-      "drinkId": 2,
+      "locationId": 1,
+      "foodId": 0,
+      "drinkId": 0,
       "dessertId": 2,
-      "id": 15
-    },
-    {
-      "locationId": 3,
-      "foodId": 1,
-      "drinkId": 2,
-      "dessertId": 4,
-      "id": 16
+      "id": 2
     }
   ]
 }

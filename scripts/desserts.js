@@ -28,11 +28,14 @@ export const dessertOptions = async () => {
             
             setDessert(dessertChoice.id)
             setDessertPrice(dessertChoice.price)
-    
-            container.innerHTML = `Dessert Choice: ${dessertChoice.name}`
             
-            container.innerHTML = `${dessertChoice.name}`
-        }
+    
+            container.innerHTML = `<img class="pic" src="${dessertChoice.image}"> ${dessertChoice.name}`
+            
+            container.innerHTML = `${locationDesserts.dessert.name}
+            ${locationDesserts.quantity}` 
+            console.log(locationDesserts)
+        }   
     
     }
 
@@ -47,7 +50,7 @@ export const dessertOptions = async () => {
     dessertHTML += '<option value="0">Select a dessert</option>'
 
     const arrayOfDesserts = locationDessertChoice.map( (dessert) => {
-            return `<option value="${dessert?.dessert.id}">${dessert?.dessert.name}</option>`
+            return `<option value="${dessert?.dessert.id}">${dessert?.dessert.name} - qty: ${dessert.quantity}</option>`
         }
     )
     dessertHTML += '<option value="5">None</option>'
@@ -55,13 +58,3 @@ export const dessertOptions = async () => {
     dessertHTML += "</select>"
     return dessertHTML
 }
-
-// let chosenLocationId = 0;
-// const handlelcoationchangeforfoods = (change) => {
-//     if (change.taRGET.id === 'lcoation'){
-//         chosenlocationId = parseInt(change.target.value)
-//         foodsAvailable();
-
-
-//     }
-// }
