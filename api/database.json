@@ -283,8 +283,13 @@
     },
     {
       "locationId": 1,
+<<<<<<< HEAD
       "foodId": 1,
       "drinkId": 2,
+=======
+      "foodId": 0,
+      "drinkId": 0,
+>>>>>>> main
       "dessertId": 2,
       "id": 2
     }
