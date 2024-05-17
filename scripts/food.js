@@ -1,10 +1,22 @@
 import { setFoodPrice } from "./subtotal.js"
-import { setFood } from "./transientState.js"
+import { setFood, transientState } from "./transientState.js"
 
+let chosenLocationId = 0
+
+const handleLocationChangeForFood = (change) => {
+    if(change.target.id === 'locationDropdown') {
+   transientState.locationId = chosenLocationId;
+        const customEventFoods = new CustomEvent("newLocationSelectedFoods");
+        document.dispatchEvent(customEventFoods)
+    }
+}
 
 export const foodChoices = async () => {
   const response = await fetch("http://localhost:8088/foods")
   const foods = await response.json()
+  const locationFoodResponse = await fetch("http://localhost:8088/locationFoodMenu?_expand=food")
+    const locationFoods = await locationFoodResponse.json()
+
 
   const handleFoodChange = (changeEvent) => {
     if (changeEvent.target.id === 'food') {
@@ -15,23 +27,25 @@ export const foodChoices = async () => {
   
         setFood(foodChoice.id)
         setFoodPrice(foodChoice.price)
-  
-        containerF.innerHTML = `${foodChoice.name}`
+
+        containerF.innerHTML = `<img class="pic" src="${foodChoice.image}">${foodChoice.name}`
   
     }
 
   }
   
   document.addEventListener("change", handleFoodChange)
-  
+  //document.addEventListener ("change", handleLocationChangeForFood)
 
+  const locationFoodChoice = locationFoods.filter(singleFood => transientState.locationId === singleFood.locationId)
+  
   let foodHTML = " "
 
   foodHTML += '<select id="food">'
   foodHTML += '<option value="0">Select A Food</option>' 
 
-const foodsArray = foods.map( (food) => {
-    return `<option value="${food.id}">${food.name}</option>`
+const foodsArray = locationFoodChoice.map( (food) => {
+    return `<option value="${food?.food.id}">${food?.food.name} - qty: ${food.quantity}</option>`
   }
 
 )
@@ -44,3 +58,5 @@ foodHTML += "</select>"
 return foodHTML
 
 }
+
+
