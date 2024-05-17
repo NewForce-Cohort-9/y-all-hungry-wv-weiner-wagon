@@ -10,6 +10,6 @@ const handleOrder = (clickEvent) => {
 // Define a function which holds the order button and event listener that places the order
 export const placeOrder = () => {
     document.addEventListener("click", handleOrder);
-
+    
     return `<button id='placeOrder'>Place Order</button>`;
 }

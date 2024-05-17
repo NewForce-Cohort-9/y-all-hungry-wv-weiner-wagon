@@ -1,4 +1,4 @@
-import { setDrink, transientState } from "./transientState.js"
+import { setDrink, transientState, changeQty } from "./transientState.js"
 import { setDrinkPrice } from "./subtotal.js"
 
 let chosenLocationId = 0
@@ -16,6 +16,8 @@ export const DrinkOptions = async() => {
     const drinks = await response.json()
     const locationDrinkResponse = await fetch("http://localhost:8088/locationDrinkMenu?_expand=drink")
     const locationDrinks = await locationDrinkResponse.json()
+    const orderResponse = await fetch("http://localhost:8088/orders")
+    const orders = await orderResponse.json()
     
     const handleDrinkChange = (changeEvent) => {
         if(changeEvent.target.id === 'drink') {
@@ -31,10 +33,24 @@ export const DrinkOptions = async() => {
         }
     
     }
+    const reduceQty = () => {
+
+  for(const singleDrink of locationDrinks){
+    for (const singleOrder of orders){
+
+        if(singleDrink.Id === singleOrder.drinkId){
+    
+            changeQty("locationDrinkMenu", singleDrink.quantity -= 1)
+        }
+    }
+  }
+
+    }
     
     document.addEventListener("change", handleDrinkChange)
     document.addEventListener("change", handleLocationChangeForDrink)
 
+    document.addEventListener("newOrder", reduceQty)
     const locationDrinkChoice = locationDrinks.filter(singleDrink => transientState.locationId === singleDrink.locationId)
 
     let drinkChoicesHTML = ""

@@ -30,9 +30,9 @@ export const dessertOptions = async () => {
     
             container.innerHTML = `<img class="pic" src="${dessertChoice.image}"> ${dessertChoice.name}`
             
-            container.innerHTML = `${locationDesserts.dessert.name}
-            ${locationDesserts.quantity}` 
-            console.log(locationDesserts)
+            // container.innerHTML = `${locationDesserts.dessert.name}
+            // ${locationDesserts.quantity}` 
+            // console.log(locationDesserts)
         }   
     
     }

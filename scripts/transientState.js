@@ -36,6 +36,23 @@ export const setDrink = (chosenDrink) => {
 // export const subtotal = (transientState) =
 
 
+//set quantity with PUT method by subtracting one from joined tables when order is complete
+export const changeQty = async (correctTable, quantity) => {
+
+    const qtyPut = {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({quantity: quantity})
+    }
+
+    const response = await fetch(`http://localhost:8088/${correctTable}`, qtyPut)
+    const newQuantity = response.json()
+    const customEvent = new CustomEvent("newQuantity")
+    document.dispatchEvent(customEvent)
+}
+
 export const saveOrder = async () => {
 
     const postOptions = {
@@ -46,6 +63,7 @@ export const saveOrder = async () => {
         body: JSON.stringify(transientState)
 
 }
+
 
 
   // Send the transient state to your API
