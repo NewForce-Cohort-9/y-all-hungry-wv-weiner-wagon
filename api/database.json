@@ -288,11 +288,7 @@
       "id": 1
     },
     {
-<<<<<<< HEAD
-      "locationId": 1,
-=======
       "locationId": 0,
->>>>>>> main
       "foodId": 1,
       "drinkId": 1,
       "dessertId": 4,
@@ -323,10 +319,6 @@
       "locationId": 0,
       "foodId": 3,
       "drinkId": 2,
-<<<<<<< HEAD
-      "dessertId": 2,
-      "id": 2
-=======
       "dessertId": 4,
       "id": 6
     },
@@ -420,20 +412,13 @@
       "drinkId": 3,
       "dessertId": 3,
       "id": 19
->>>>>>> main
     },
     {
       "locationId": 2,
       "foodId": 1,
-<<<<<<< HEAD
-      "drinkId": 2,
-      "dessertId": 2,
-      "id": 3
-=======
       "drinkId": 4,
       "dessertId": 4,
       "id": 20
->>>>>>> main
     }
   ]
 }
