@@ -27,16 +27,13 @@ export const foodChoices = async () => {
   
         setFood(foodChoice.id)
         setFoodPrice(foodChoice.price)
-        setQuantity(foodQuantity.id)
 
-        container.innerHTML = `Food Choice: ${foodChoice.name}`
-        containerF.innerHTML = `${foodChoice.name}`
+        container.innerHTML = `<img src="${food?.image}"`>`Food Choice: ${foodChoice.name}`
   
     }
 
   }
-  
-  document.addEventListener("change", handleLocationChangeForFood)
+  document.addEventListener ("change", handleLocationChangeForFood)
   document.addEventListener("change", handleFoodChange)
 
   const locationFoodChoice = locationFoods.filter(singleFood => transientState.locationId === singleFood.locationId)
@@ -47,7 +44,7 @@ export const foodChoices = async () => {
   foodHTML += '<option value="0">Select A Food</option>' 
 
 const foodsArray = locationFoodChoice.map( (food) => {
-    return `<option value="${food?.id}">${food?.food.name} ${food?.quantityId}</option>`
+    return `<option value="${food?.food.id}">${food?.food.name} - qty: ${food.quantity}</option>`
   }
 
 )

@@ -3,8 +3,6 @@ import { setDrinkPrice } from "./subtotal.js"
 
 
 
-
-
 export const DrinkOptions = async() => {
     const response = await fetch("http://localhost:8088/drinks")
     const drinks = await response.json()
