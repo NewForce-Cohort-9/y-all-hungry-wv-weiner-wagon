@@ -281,6 +281,13 @@
       "drinkId": 1,
       "dessertId": 1,
       "id": 1
+    },
+    {
+      "locationId": 1,
+      "foodId": 0,
+      "drinkId": 0,
+      "dessertId": 2,
+      "id": 2
     }
   ]
 }
