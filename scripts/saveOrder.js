@@ -11,5 +11,5 @@ const handleOrder = (clickEvent) => {
 export const placeOrder = () => {
     document.addEventListener("click", handleOrder);
 
-    return `<button id='placeOrder'>Place Order</button>`;
+    return `<button id='placeOrder' class="btn btn-danger">Place Order</button>`;
 }

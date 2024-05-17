@@ -269,6 +269,62 @@
   ],
   "orders": [
     {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 3,
+      "dessertId": 4,
+      "id": 1
+    },
+    {
+      "locationId": 0,
+      "foodId": 1,
+      "drinkId": 1,
+      "dessertId": 4,
+      "id": 2
+    },
+    {
+      "locationId": 0,
+      "foodId": 1,
+      "drinkId": 1,
+      "dessertId": 4,
+      "id": 3
+    },
+    {
+      "locationId": 0,
+      "foodId": 1,
+      "drinkId": 3,
+      "dessertId": 3,
+      "id": 4
+    },
+    {
+      "locationId": 0,
+      "foodId": 2,
+      "drinkId": 1,
+      "dessertId": 3,
+      "id": 5
+    },
+    {
+      "locationId": 0,
+      "foodId": 3,
+      "drinkId": 2,
+      "dessertId": 4,
+      "id": 6
+    },
+    {
+      "locationId": 0,
+      "foodId": 2,
+      "drinkId": 2,
+      "dessertId": 4,
+      "id": 7
+    },
+    {
+      "locationId": 0,
+      "foodId": 2,
+      "drinkId": 1,
+      "dessertId": 2,
+      "id": 8
+    },
+    {
       "locationId": 1,
       "foodId": 2,
       "drinkId": 4,
@@ -290,14 +346,30 @@
       "id": 11
     },
     {
-      "locationId": 1,
-<<<<<<< HEAD
-      "foodId": 1,
-      "drinkId": 2,
-=======
+      "locationId": 3,
       "foodId": 0,
       "drinkId": 0,
->>>>>>> main
+      "dessertId": 0,
+      "id": 12
+    },
+    {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 1,
+      "dessertId": 1,
+      "id": 13
+    },
+    {
+      "locationId": 2,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 3,
+      "id": 14
+    },
+    {
+      "locationId": 3,
+      "foodId": 1,
+      "drinkId": 2,
       "dessertId": 2,
       "id": 15
     },
@@ -314,6 +386,27 @@
       "drinkId": 2,
       "dessertId": 1,
       "id": 17
+    },
+    {
+      "locationId": 1,
+      "foodId": 1,
+      "drinkId": 2,
+      "dessertId": 3,
+      "id": 18
+    },
+    {
+      "locationId": 2,
+      "foodId": 3,
+      "drinkId": 3,
+      "dessertId": 3,
+      "id": 19
+    },
+    {
+      "locationId": 2,
+      "foodId": 1,
+      "drinkId": 4,
+      "dessertId": 4,
+      "id": 20
     }
   ]
 }

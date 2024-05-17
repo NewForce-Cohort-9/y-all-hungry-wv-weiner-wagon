@@ -70,7 +70,7 @@ export const saveOrder = async () => {
   const orderBottom = document.querySelector("#orderBottom")
   orderBottom.innerHTML = `<h5>Your order has been placed at the ${location.name} Location!</h5>
                            <div>Order Number: ${orderId.id}, Order ${total.innerHTML}</div>
-                           <button id='newOrder'>Place Another Order</button>`
+                           <button class="btn btn-danger" id='newOrder'>Place Another Order</button>`
 
   const customEvent = new CustomEvent("newOrder")
   document.dispatchEvent(customEvent)

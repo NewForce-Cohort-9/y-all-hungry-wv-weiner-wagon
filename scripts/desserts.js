@@ -46,7 +46,7 @@ export const dessertOptions = async () => {
 
     let dessertHTML = ""
 
-    dessertHTML += '<select id="dessert">'
+    dessertHTML += '<select class="btn btn-info" id="dessert">'
     dessertHTML += '<option value="0">Select a dessert</option>'
 
     const arrayOfDesserts = locationDessertChoice.map( (dessert) => {
