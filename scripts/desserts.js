@@ -28,7 +28,7 @@ export const dessertOptions = async () => {
             setDessertPrice(dessertChoice.price)
             
     
-            container.innerHTML = `Dessert Choice: ${dessertChoice.name}`
+            container.innerHTML = `<img class="pic" src="${dessertChoice.image}"> ${dessertChoice.name}`
             
             container.innerHTML = `${locationDesserts.dessert.name}
             ${locationDesserts.quantity}` 
@@ -48,7 +48,7 @@ export const dessertOptions = async () => {
     dessertHTML += '<option value="0">Select a dessert</option>'
 
     const arrayOfDesserts = locationDessertChoice.map( (dessert) => {
-            return `<option value="${dessert?.dessert.id}">${dessert?.dessert.name} ${dessert.quantity}</option>`
+            return `<option value="${dessert?.dessert.id}">${dessert?.dessert.name} - qty: ${dessert.quantity}</option>`
         }
     )
     dessertHTML += '<option value="5">None</option>'
