@@ -1,5 +1,5 @@
 import { setFoodPrice } from "./subtotal.js"
-import { setFood, transientState } from "./transientState.js"
+import { setFood, transientState, changeQty } from "./transientState.js"
 
 let chosenLocationId = 0
 
@@ -16,6 +16,8 @@ export const foodChoices = async () => {
   const foods = await response.json()
   const locationFoodResponse = await fetch("http://localhost:8088/locationFoodMenu?_expand=food")
     const locationFoods = await locationFoodResponse.json()
+    const orderResponse = await fetch("http://localhost:8088/orders")
+    const orders = await orderResponse.json()
 
 
   const handleFoodChange = (changeEvent) => {
