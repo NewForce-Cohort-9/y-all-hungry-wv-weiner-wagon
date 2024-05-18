@@ -35,9 +35,21 @@ export const foodChoices = async () => {
     }
 
   }
+
+  const reduceQty = () => {
+    for(const singleFood of locationFoods) {
+        if(transientState.locationId == singleFood.locationId && transientState.foodId == singleFood.foodId){
+            let foodQty = singleFood.quantity - 1
+          changeQty("locationFoodMenu", foodQty, singleFood.id)
+        }
+    }
+
+  }
   
   document.addEventListener("change", handleFoodChange)
   //document.addEventListener ("change", handleLocationChangeForFood)
+
+  document.addEventListener("newOrder", reduceQty)
 
   const locationFoodChoice = locationFoods.filter(singleFood => transientState.locationId === singleFood.locationId)
   
@@ -52,7 +64,7 @@ const foodsArray = locationFoodChoice.map( (food) => {
 
 )
 
-foodHTML += '<option value="5">None</option>'
+
 
 foodHTML += foodsArray.join(" ")
 foodHTML += "</select>"
