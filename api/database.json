@@ -171,7 +171,7 @@
     {
       "id": 1,
       "locationId": 1,
-      "quantity": 95,
+      "quantity": 94,
       "drinkId": 1
     },
     {
@@ -239,7 +239,7 @@
     {
       "id": 3,
       "locationId": 1,
-      "quantity": 10,
+      "quantity": 9,
       "dessertId": 3
     },
     {
@@ -412,6 +412,13 @@
       "drinkId": 4,
       "dessertId": 2,
       "id": 19
+    },
+    {
+      "locationId": 1,
+      "foodId": 1,
+      "drinkId": 1,
+      "dessertId": 3,
+      "id": 20
     }
   ]
 }
