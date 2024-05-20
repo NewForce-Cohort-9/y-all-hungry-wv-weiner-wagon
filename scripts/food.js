@@ -1,5 +1,5 @@
 import { setFoodPrice } from "./subtotal.js"
-import { setFood, transientState } from "./transientState.js"
+import { setFood, transientState, changeQty } from "./transientState.js"
 
 let chosenLocationId = 0
 
@@ -16,6 +16,8 @@ export const foodChoices = async () => {
   const foods = await response.json()
   const locationFoodResponse = await fetch("http://localhost:8088/locationFoodMenu?_expand=food")
     const locationFoods = await locationFoodResponse.json()
+    const orderResponse = await fetch("http://localhost:8088/orders")
+    const orders = await orderResponse.json()
 
 
   const handleFoodChange = (changeEvent) => {
@@ -33,9 +35,21 @@ export const foodChoices = async () => {
     }
 
   }
+
+  const reduceQty = () => {
+    for(const singleFood of locationFoods) {
+        if(transientState.locationId == singleFood.locationId && transientState.foodId == singleFood.foodId){
+            let foodQty = singleFood.quantity - 1
+          changeQty("locationFoodMenu", foodQty, singleFood.id)
+        }
+    }
+
+  }
   
   document.addEventListener("change", handleFoodChange)
   //document.addEventListener ("change", handleLocationChangeForFood)
+
+  document.addEventListener("newOrder", reduceQty)
 
   const locationFoodChoice = locationFoods.filter(singleFood => transientState.locationId === singleFood.locationId)
   
@@ -50,7 +64,7 @@ const foodsArray = locationFoodChoice.map( (food) => {
 
 )
 
-foodHTML += '<option value="5">None</option>'
+
 
 foodHTML += foodsArray.join(" ")
 foodHTML += "</select>"
